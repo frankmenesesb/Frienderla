@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Friender</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.4.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.mobile-1.4.4.min.js"></script>
+	<script src="../js/friender.js"></script>
+</head>
+
+<script>
+function goTo(strLocation){
+	window.location.href = strLocation;
+}
+
+</script>
+
+<body>
+
+<div id="fb-root"></div>
+
+<div data-role="page" class="jqm-demos jqm-home">
+
+	<div data-role="header" id="divHeader">
+		<table width="95%" align="center" id="tblMainHeader">
+			<tbody>
+				<tr>
+                                    <td width="5%" align="center"><img src="../images/fotoCliente.jpg" width="25px" id="imgPhoto" class="imagenHeader"></td>
+					<td align="left" width="90%" style="color: white;">Andres - Burger King</td>
+					<td width="5%" align="center"><img src="../images/GRUPOAZUL.png" width="25px"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">
+						<hr>
+						<label id="lblHeader"></label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div role="main" id="divMain">
+		<br/>
+		
+		<div id="divMainContent"></div>
+		
+		<br />
+		<table width="100%" align="center">
+			<tr>
+				<td width="100%" align="center"><img src="../images/FRIENDERSITO.png"></td>
+			</tr>
+		</table>
+		
+	</div><!-- /content -->
+
+	
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" style="background-color:#FCFDF4">
+			<ul>
+				<li><a href="#" onclick="javascript:loadFrm2('frm001');"><img id="img001" src="../images/ESTADCLIENTES.png" style="max-width:20px !important;"></a></li>
+				<li><a href="#" onclick="javascript:loadFrm2('frm002');"><img id="img002" src="../images/BOTONBONOS.png" style="max-width:20px !important;"></a></li>
+				<li><a href="#" onclick="javascript:loadFrm2('frm003');"><img id="img003" src="../images/FRCLIENTE.png" style="max-width:20px !important;"></a></li>
+				<li><a href="#" onclick="javascript:loadFrm2('frm004');"><img id="img004" src="../images/BOTONNOTIF.png" style="max-width:20px !important;"></a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+
+</div><!-- /page -->
+
+</body>
+</html>

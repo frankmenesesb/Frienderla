@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Friender</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.4.min.css">
+	<link rel="stylesheet" href="../css/jqm-demos.css">
+	<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<script src="../js/jquery.js"></script>
+	<script src="../js/jquery.mobile-1.4.4.min.js"></script>
+	<script src="../js/friender.js"></script>
+	<script src="../js/setUserE.js"></script>
+</head>
+
+<script>
+function goTo(strLocation){
+	window.location.href = strLocation;
+}
+
+
+
+
+function llevar() {
+                
+                
+
+                location.href = '../frm/frmLoginE.html';
+            }
+
+
+</script>
+
+</script>
+
+<body>
+
+<div id="fb-root"></div>
+
+<div data-role="page" class="jqm-demos jqm-home">
+
+	<div data-role="header" id="divHeader" data-position="fixed">
+		<a href="#" class="orangeBkg" style="border:none !important;border:0px solid !important;"><img style="border:none !important;border:0px solid;" src='../images/back.png' width="17px" onclick="goTo('../index.html')"></a>
+		<h1>Crear Cuenta</h1>
+		<button class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right" onclick="llevar();">Siguiente</button>
+	</div>
+
+	<div role="main" id="divMain">
+		<br/>
+		<table width="95%" align="center" id="tblMain" class="ui-corner-all ui-shadow">
+			<tbody>
+				<tr>
+					<td>&nbsp;</td>
+					<td width="65%">
+						<table width="95%">
+							<tr>
+								<td>
+									<input type="text" name="txtNombre" id="txtNombre" value="" placeholder="Nombre">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" name="txtApellido" id="txtApellido" value="" placeholder="Apellido">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="email" name="txtEmail" id="txtEmail" value="" placeholder="Email">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" name="txtUsuario" id="txtUsuario" value="" placeholder="Usuario">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" name="txtContrasena" id="txtContrasena" value="" placeholder="Contraseña">
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td width="30%" align="center">
+						<img src="../images/photo.png">
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td colspan="2">
+						<table width="100%">
+							<tr>
+								<td>
+									<input type="text" name="txtTelefono" id="txtTelefono" value="" placeholder="Número de Teléfono">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" name="txtEmpresa" id="txtEmpresa" value="" placeholder="Nombre de la Empresa">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" name="txtPais" id="txtPais" value="" placeholder="Pais">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" name="txtRegion" id="txtRegion" value="" placeholder="Region">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<select id="slcPlanes">
+										<option value="1">Plan Gratuito</option>
+                                                                                <option value="2">Plan Basico</option>
+                                                                                <option value="3">Plan Premium</option>
+                                                                                <option value="4">Plan Gold</option>
+									</select>
+								</td>
+							</tr>
+<tr>
+								<td>
+									
+                                                                        <input type="submit" value="Guardar" name="submit" class="submit_button"/>
+                
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td colspan="2" align="center"><a class="href" href="#" onclick="goTo('./frmPlanes.html');">Mira aqui los planes</a></td>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		
+		<table width="100%" align="center">
+			<tr>
+				<td width="100%" align="center">Al registrarme acepto las <a href="#">Condiciones de Servicio Politica y Privacidad</a> de friender</td>
+			</tr>
+		</table>
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+</body>
+</html>

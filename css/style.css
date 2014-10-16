@@ -1,0 +1,316 @@
+#divHeader, button{
+	background: #fbb03b !important;
+	font-weight: normal;
+}
+button{
+	color:white !important;
+}
+.href{
+	color: #fbb03b !important;
+}
+.orangeBkg{
+	background: #fbb03b !important;
+}
+h1, h2, h3{
+	color:white;
+	font-weight: normal;
+}
+#tblPlanes{
+	text-align:left !important;
+}
+#tblPlanes label, #tblMainHeader{
+	color:white;
+}
+
+#tblPlanes .lblSmall{
+	color:white;
+	font-size:14px !important;
+}
+
+#tblPlanes .lblBig{
+	color:white;
+	font-size:30px !important;
+}
+#divHeader .ui-btn { border: none !important; }
+#divPlanBtn table{background-image:url('../images/logov2.png');background-repeat:no-repeat;background-position:center;text-align:left !important;}
+
+body{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-weight:
+}
+.ui-icon-myicon:after {
+	background-image: url("../images/back.png");
+}
+
+#divMain{
+	background: #FCFDF4 !important;
+}
+
+#tblMain{
+	background: #FCFDF4 !important;
+	border-style: solid;
+    border-width: 2px;
+	border-color:#e3e4e0;
+}
+
+#tblMainWhite{
+	background: white !important;
+	border-style: solid;
+    border-width: 2px;
+	border-color:#e3e4e0;
+	color:gray !important;
+}
+
+#tblMainWhite a{
+	color:gray !important;
+}
+
+#tblMainHeader label{
+	color:white;
+}
+
+hr{
+	border-color: white !important;
+}
+
+.ui-btn-active{
+	background-color:transparent !important;
+	color: #29abe2 !important;
+	border-color:none !important;
+        
+}
+
+
+#tblAmigos{
+	text-align:left !important;
+}
+#tblAmigos label, #tblMainHeader{
+	color:black;
+}
+
+#tblAmigos .lblSmall{
+	color: #828282;
+	font-size:12px !important;
+}
+
+#tblAmigos .lblBig{
+	color:black;
+	font-size:30px !important;
+}
+#tblAmigos .lblMedium{
+	color: #883F46;
+	font-size:16px !important;
+}
+#tblAmigos .lblMediumB{
+	color: #883F46;
+	font-size:12px !important;
+        
+}
+
+
+
+#tblNoticias{
+	text-align:left !important;
+}
+#tblNoticias label, #tblMainHeader{
+	color:black;
+}
+
+#tblNoticias .lblSmall{
+	color: #828282;
+	font-size:12px !important;
+}
+
+#tblNoticias .lblSmallB{
+	color: #883F46;
+	font-size:12px !important;
+}
+
+#tblNoticias .lblSmallC{
+	color: #828282;
+	font-size:12px !important;
+}
+
+#tblNoticias .lblSmallD{
+	color: #883F46;
+	font-size:12px !important;
+        text-align: right;
+}
+
+#tblNoticias .lblSmallE{
+	color: #00E4D1;
+	font-size:10px !important;
+        text-align: right;
+}
+
+#tblNoticias .lblBig{
+	color:black;
+	font-size:30px !important;
+}
+#tblNoticias .lblMedium{
+	color: #883F46;
+	font-size:16px !important;
+}
+
+
+
+
+#tblBonos{
+	text-align:left !important;
+}
+#tblBonos label, #tblMainHeader{
+	color:black;
+}
+
+#tblBonos .lblSmall{
+	color: #828282;
+	font-size:12px !important;
+}
+
+#tblBonos .lblSmallB{
+	color: #883F46;
+	font-size:12px !important;
+}
+
+#tblBonos .lblSmallC{
+	color: #828282;
+	font-size:12px !important;
+}
+
+#tblBonos .lblSmallD{
+	color: #883F46;
+	font-size:12px !important;
+        text-align: left;
+}
+
+#tblBonos .lblSmallE{
+	color: #00E4D1;
+	font-size:10px !important;
+        text-align: left;
+}
+
+#tblBonos .lblBig{
+	color:black;
+	font-size:30px !important;
+}
+#tblBonos .lblMedium{
+	color: #883F46;
+	font-size:16px !important;
+}
+
+
+
+
+div.parte1{
+
+float: left;
+width: 25%;
+height: 100%;
+text-align: left;
+}
+div.parte2{
+
+float: right;
+width: 75%;
+height: 100%;
+text-align: left;
+}
+
+div.parte3{
+
+float: left;
+width: 25%;
+height: 50%;
+text-align: left;
+}
+div.parte4{
+
+float: right;
+width: 75%;
+height: 50%;
+text-align: right;
+}
+div.parte5{
+
+float: right;
+width: 100%;
+height: 50%;
+text-align: right;
+}
+
+div.parte6{
+
+float: left;
+width: 15%;
+height: 100%;
+text-align: left;
+}
+div.parte7{
+
+float: left;
+width: 45%;
+height: 100%;
+text-align: left;
+
+}
+div.parte8{
+
+float: left;
+width: 40%;
+height: 100%;
+text-align: left;
+}
+
+
+redondo {
+border: 2px solid grey;
+margin: 0;
+padding: 0;
+border-radius: 800px;
+overflow: hidden;
+}
+
+.imagen {
+ width: 65px;
+ height: 65px;
+ border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+-khtml-border-radius: 100px;
+ overflow: hidden;
+ float: left;
+}
+
+
+.imagen {
+ width: 35px;
+ height: 35px;
+ border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+-khtml-border-radius: 100px;
+ overflow: hidden;
+ float: left;
+}
+
+.imagenLog {
+ width: 90px;
+ height: 90px;
+ border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+-khtml-border-radius: 100px;
+ overflow: hidden;
+ float: top;
+}
+
+.imagenHeader {
+ width: 50px;
+ height: 50px;
+ border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+-khtml-border-radius: 100px;
+ overflow: hidden;
+ float: left;
+}
