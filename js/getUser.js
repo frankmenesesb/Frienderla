@@ -59,6 +59,7 @@ $(function() {
                             var id=jsonResp.DATA[i]["id"];
                             var nombre=jsonResp.DATA[i]["nombre"];
                             var apellido=jsonResp.DATA[i]["apellidos"];
+                            var login=jsonResp.DATA[i]["login"];
                             var log="";
                             if( (nombre===null || nombre==="")  || (id===null || id==="")){ 
                             
@@ -66,7 +67,7 @@ $(function() {
                            
                             }else{
                             
-                           location.href = '../frm/frmMain.html?variable='+nombre+'&nbsp'+apellido;
+                           location.href = '../frm/frmMain.html?'+'%'+login+'variable='+nombre+'&nbsp'+apellido;
                             
                             //document.location.href = "../frm/frmMain.html?parametro1=" + parametro1 + "&parametro2=" + parametro2 + "&";
                         

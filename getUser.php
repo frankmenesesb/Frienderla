@@ -24,7 +24,7 @@
 
 
 //$sql="SELECT * FROM user WHERE id = '".$q."'";
-$sql="SELECT id, nombre, apellidos FROM usuarios WHERE login= '$login' and password='$pass1'";
+$sql="SELECT id, nombre, apellidos, login FROM usuarios WHERE login= '$login' and password='$pass1'";
 $result = mysqli_query($con,$sql);
 
 $arrayData = array();
