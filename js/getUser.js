@@ -42,13 +42,7 @@ $(function() {
                         alert('Error Usuario no registrado!!');
                     }
                     if(jsonResp.MESSAGE === ""){
-                        var html="";
-                        var video="";
-                        var comentario="";
-                        var image="";
-                        var imagec="";
-                        var personaje="";
-                        var coment;
+                        
                         
                         
                         for(var i=0;i<jsonResp.DATA.length;i++){
@@ -60,6 +54,7 @@ $(function() {
                             var nombre=jsonResp.DATA[i]["nombre"];
                             var apellido=jsonResp.DATA[i]["apellidos"];
                             var login=jsonResp.DATA[i]["login"];
+                            var foto=jsonResp.DATA[i]["foto"];
                             var log="";
                             if( (nombre===null || nombre==="")  || (id===null || id==="")){ 
                             
@@ -67,7 +62,9 @@ $(function() {
                            
                             }else{
                             
-                           location.href = '../frm/frmMain.html?'+'%'+login+'variable='+nombre+'&nbsp'+apellido;
+                           location.href = '../frm/frmMain.html?var='+nombre+'$'+apellido+'*'+login+"!&"+foto+"@";
+                           
+                           
                             
                             //document.location.href = "../frm/frmMain.html?parametro1=" + parametro1 + "&parametro2=" + parametro2 + "&";
                         

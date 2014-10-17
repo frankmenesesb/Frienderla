@@ -6,10 +6,7 @@
 
     $strMessage = "";
 
-    //$q = intval($_REQUEST['strUser']);
-    
-    $login = htmlspecialchars(trim($_REQUEST['usuario']));
-    $pass1 = sha1(md5(trim($_REQUEST['contrasena'])));
+    $login =intval($_REQUEST['usuario']);
 
     $con = mysqli_connect($datos[0],$datos[1],$datos[2],$datos[3]);
     $blResp = true;
@@ -22,24 +19,20 @@
 
     mysqli_select_db($con,"ajax_demo");
 
-
+//echo $login;
 //$sql="SELECT * FROM user WHERE id = '".$q."'";
-$sql="SELECT id, nombre, apellidos, login, foto FROM usuarios WHERE login= '$login' and password='$pass1'";
+$sql="SELECT foto FROM usuarios WHERE login = '".$login."'";
 $result = mysqli_query($con,$sql);
 
 $arrayData = array();
 
 while($row = mysqli_fetch_assoc($result)) {
     array_push($arrayData,$row);
-    
-    
 }
 
-if(count($arrayData) === 0 || count($arrayData) === null || count($arrayData) === ''){
+if(count($arrayData) === 0){
     $strMessage = "EMPTY";
 }
-
-
 
 mysqli_close($con);
 
@@ -51,4 +44,3 @@ $arrayResp = array(
 
 echo json_encode($arrayResp);
 
-?>

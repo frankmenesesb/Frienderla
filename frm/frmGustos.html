@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Friender</title>
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.4.min.css">
+        <link rel="stylesheet" href="../css/jqm-demos.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery.mobile-1.4.4.min.js"></script>
+        <script src="../js/friender.js"></script>
+        <script src="../js/setGustos.js"></script>
+    </head>
+
+    <script>
+        function goTo(strLocation) {
+            window.location.href = strLocation;
+        }
+
+        function llevar() {
+
+
+
+            location.href = '../frm/frmLogin.html';
+        }
+
+
+    </script>
+    
+    <script>
+window.onload = function()
+{
+var recibiendoVariable = location.search.slice( location.search.indexOf("=") + 1,location.search.indexOf("$"));
+
+
+document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
+
+}
+
+</script>
+
+    <body>
+
+        <div id="fb-root"></div>
+
+        <div data-role="page" class="jqm-demos jqm-home">
+
+            <div data-role="header" id="divHeader">
+                <a href="#" class="orangeBkg" style="border:none !important;border:0px solid !important;"><img style="border:none !important;border:0px solid;" src='../images/back.png' width="17px" onclick="goTo('../index.html')"></a>
+                <h1>Gustos Favoritos</h1>
+                <button type="submit" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right" >Siguiente</button>
+            </div>
+
+            <div role="main" id="divMain">
+                <br/>
+                <table width="95%" align="center" id="tblMain" class="ui-corner-all ui-shadow">
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td width="65%">
+                                <table width="95%">
+                                    <tr>
+                                        <td>
+                                            Friender quiere recomendarte los eventos mas adecuados, y los amigos con gustos mas comunes a ti,
+                                            por esto nos gustaria saber acerca de tus gustos favoritos!
+
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </td>
+                            <td width="30%" align="center">
+                                <img src="../images/FRIENDERSITO.png">
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td colspan="2">
+                                <table width="100%">
+
+                                    <tr>
+                                        <td>
+                                            <div class="ui-field-contain">
+                                                <label for="select-native-1">Peliculas:</label>
+                                                <select name="txtPelicula" id="select-native-1">
+                                                    <option value="terror">Terror</option>
+                                                    <option value="suspenso">Suspenso</option>
+                                                    <option value="accion">Accion</option>
+                                                    <option value="comedia">Comedia</option>
+                                                    <option value="animada">Animada</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui-field-contain">
+                                                <label for="txtDeporte">Deporte:</label>
+                                                <select name="select-native-1" id="select-native-1">
+                                                    <option value="tenis">Tenis</option>
+                                                    <option value="futbol">Futbol</option>
+                                                    <option value="golf">Golf</option>
+                                                    <option value="basketball">Basketball</option>
+                                                    <option value="bolos">Bolos</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui-field-contain">
+                                                <label for="select-native-1">Comida:</label>
+                                                <select name="txtComida" id="select-native-1">
+                                                    <option value="extranjeras">Extranjeras</option>
+                                                    <option value="carnes">Carnes</option>
+                                                    <option value="mar">Mar</option>
+                                                    
+                                                    <option value="asados">Asados</option>
+                                                    <option value="rapida">Rapida</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="ui-field-contain">
+                                                <label for="select-native-1">Musica:</label>
+                                                <select name="txtMusica" id="select-native-1">
+                                                    <option value="rock">Rock</option>
+                                                    <option value="pop">Pop</option>
+                                                    <option value="salsa">Salsa</option>
+                                                    <option value="bachata">Bachata</option>
+                                                    <option value="todas">Todas</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <input type="submit" value="Guardar" name="submit" class="submit_button"/>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp<a style="color: #FCFDF4;" id="recibirVariable" name="recibirVariable"></a></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                
+            </div><!-- /content -->
+
+        </div><!-- /page -->
+        <div id="flash">
+
+        </div>
+        <div id="show"></div>
+
+    </body>
+</html>

@@ -23,8 +23,10 @@ function goTo(strLocation){
 function llevar() {
                 
                 
-
-                location.href = '../frm/frmLogin.html';
+               var strLog = $("#txtUsuario").val();
+               alert(strLog);
+                //location.href = '../frm/frmLogin.html';
+                location.href = '../frm/frmGustos.html?var='+strLog+'$';
             }
 
 

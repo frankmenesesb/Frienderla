@@ -52,8 +52,7 @@ $(function() {
         }
         else
         {
-            $("#flash").show();
-            $("#flash").fadeIn(400).html('<span class="load">Loading..</span>');
+            
             $.ajax({
                 type: "POST",
                 url: "../regis_user.php",
@@ -63,9 +62,9 @@ $(function() {
                 success: function(jsonResp, html) {
 
 
-                    $("#show").after(html);
+                    
                     document.getElementById('txtNombre').value = '';
-                    $("#flash").hide();
+                    
                     
 
                     if (jsonResp.RESPONSE) {
@@ -73,10 +72,9 @@ $(function() {
                         alert(jsonResp.MESSAGE);
                         llevar();
                         
-                        $("#show").after(html);
+                        
                     document.getElementById('txtNombre').value = '';
-                    $("#flash").hide();
-                    $("#txtNombre").focus();
+                    
 
                         if (jsonResp.MESSAGE === "") {
 

@@ -11,6 +11,7 @@
 	<script src="../js/jquery.js"></script>
 	<script src="../js/jquery.mobile-1.4.4.min.js"></script>
 	<script src="../js/friender.js"></script>
+        
 </head>
 
 <script>
@@ -24,68 +25,82 @@ function goTo(strLocation){
 <script>
 window.onload = function()
 {
-var recibiendoVariable = location.search.substr( location.search.indexOf("=") + 1);
-var recibiendoVariable = location.search.substr();
+var recibiendoVariable = location.search.slice( location.search.indexOf("=") + 1,location.search.indexOf("$"));
+var recibiendoVariable2 = location.search.slice( location.search.indexOf("$") + 1,location.search.indexOf("*"));
+var recibiendoVariable3 = location.search.slice( location.search.indexOf("*") + 1,location.search.indexOf("!"));
+var image=location.search.slice( location.search.indexOf("&") + 1,location.search.indexOf("@"));
+//var recibiendoVariable = location.search.indexOf("=");
 
 document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
-
+document.getElementById("recibirVariable2").innerHTML = recibiendoVariable2;
+document.getElementById("recibirVariable3").innerHTML = recibiendoVariable3;
+var ima="<img src=\""+image+"\" width=\"50px\" id=\"imgPhoto\" class=\"imagenHeader\">";
+$("#fotoDiv").html(ima);
 }
 
 </script>
-
+ 
 <body>
 
-<div id="fb-root"></div>
+    <div id="fb-root"></div>
 
-<div data-role="page" class="jqm-demos jqm-home">
+    <div data-role="page" class="jqm-demos jqm-home">
 
-	<div data-role="header" id="divHeader" data-position="fixed">
-		<table width="95%" align="center" id="tblMainHeader">
-			<tbody>
-				<tr>
-                                    <td width="5%" align="center"><img src="../images/ima_log.PNG" width="50px" id="imgPhoto" class="imagenHeader"></td>
-                                    <td align="left" width="90%" style="color: white;"><a id="recibirVariable" name="recibirVariable"></a></td>
-					<td width="5%" align="center"><img src="../images/GRUPOAZUL.png" width="25px"></td>
-				</tr>
-				<tr>
-					<td colspan="3" align="center">
-						<hr>
-						<label id="lblHeader"></label>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+        <div data-role="header" id="divHeader" data-position="fixed">
+            <table width="95%" align="center" id="tblMainHeader">
+                <tbody>
+                    <tr>
+                        <td width="5%" align="center">
+                            
+                            <div id="fotoDiv"></div>
+                        </td>
+                        <td align="left" width="90%" style="color: white;"><a id="recibirVariable" name="recibirVariable"></a>
+                            &nbsp<a id="recibirVariable2" name="recibirVariable2"></a>
+                        </td>
+                        <td width="5%" align="center">
+                            <img src="../images/GRUPOAZUL.png" width="25px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center">
+                            <hr>
+                            <label id="lblHeader"></label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-	<div role="main" id="divMain">
-		<br/>
-		
-		<div id="divMainContent"></div>
-		
-		<br />
-		<table width="100%" align="center">
-			<tr>
-				<td width="100%" align="center"><img src="../images/FRIENDERSITO.png"></td>
-			</tr>
-		</table>
-		
-	</div><!-- /content -->
+        <div role="main" id="divMain">
+            <br/>
 
-	
-	
-	<div data-role="footer" data-position="fixed">
-		<div data-role="navbar" style="background-color:#FCFDF4">
-			<ul>
-				<li><a href="#" onclick="javascript:loadFrm('frm001');"><img id="img001" src="../images/BOTOTIMEL.png" style="max-width:20px !important;"></a></li>
-				<li><a href="#" onclick="javascript:loadFrm('frm002');"><img id="img002" src="../images/BOTONAMIGOS.png" style="max-width:20px !important;"></a></li>
-				<li><a href="#" onclick="javascript:loadFrm('frm003');"><img id="img003" src="../images/BOTONBONOS.png" style="max-width:20px !important;"></a></li>
-				<li><a href="#" onclick="javascript:loadFrm('frm004');"><img id="img004" src="../images/BOTONGRUPO.png" style="max-width:20px !important;"></a></li>
-				<li><a href="#" onclick="javascript:loadFrm('frm005');"><img id="img005" src="../images/BOTONNOTIF.png" style="max-width:20px !important;"></a></li>
-			</ul>
-		</div><!-- /navbar -->
-	</div><!-- /footer -->
+            <div id="divMainContent"></div>
 
-</div><!-- /page -->
+            <br />
+            <table width="100%" align="center">
+                <tr>
+                    <td width="100%" align="center"><img src="../images/FRIENDERSITO.png"></td>
+                    <td>&nbsp<a style="color: #FCFDF4;" id="recibirVariable3" name="recibirVariable3"></a></td>
+                </tr>
+            </table>
+
+        </div><!-- /content -->
+
+
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" style="background-color:#FCFDF4">
+                <ul>
+                    <li><a href="#" onclick="javascript:loadFrm('frm001');"><img id="img001" src="../images/BOTOTIMEL.png" style="max-width:20px !important;"></a></li>
+                    <li><a href="#" onclick="javascript:loadFrm('frm002');"><img id="img002" src="../images/BOTONAMIGOS.png" style="max-width:20px !important;"></a></li>
+                    <li><a href="#" onclick="javascript:loadFrm('frm003');"><img id="img003" src="../images/BOTONBONOS.png" style="max-width:20px !important;"></a></li>
+                    <li><a href="#" onclick="javascript:loadFrm('frm004');"><img id="img004" src="../images/BOTONGRUPO.png" style="max-width:20px !important;"></a></li>
+                    <li><a href="#" onclick="javascript:loadFrm('frm005');"><img id="img005" src="../images/BOTONNOTIF.png" style="max-width:20px !important;"></a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+
+    </div><!-- /page -->
 
 </body>
 </html>
