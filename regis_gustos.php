@@ -23,7 +23,7 @@ if (!$link) {
     }
 
 mysqli_select_db($link,"friender");
-$query = sprintf("SELECT id_usuarios_gustos FROM gustos WHERE id_usuarios_gustos='$login'");
+$query = sprintf("SELECT idgustos FROM gustos WHERE id_usuarios_gustos='$login'");
 $result = mysqli_query($link,$query);
 if(mysqli_num_rows($result)){
     $strMessage = "gustos de Usuario ya existen por favor intentalo de nuevo!!";

@@ -16,19 +16,22 @@
     </head>
 
     <script>
-        function goTo(strLocation) {
-            window.location.href = strLocation;
-        }
+function goTo(strLocation){
+	window.location.href = strLocation;
+}
 
-        function llevar() {
+function llevar() {
+                
+                
+               var strLog = $("#recibirVariable2").val();
+               //alert(strLog);
+                //location.href = '../frm/frmLogin.html';
+                //location.href = '../frm/frmGustos.html?var='+strLog+'$';
+                location.href = '../frm/frmPhotos.html?var='+strLog+'$';
+            }
 
 
-
-            location.href = '../frm/frmLogin.html';
-        }
-
-
-    </script>
+</script>
     
     <script>
 window.onload = function()
@@ -37,6 +40,7 @@ var recibiendoVariable = location.search.slice( location.search.indexOf("=") + 1
 
 
 document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
+$("#recibirVariable2").val(recibiendoVariable);
 
 }
 
@@ -86,7 +90,7 @@ document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
                                         <td>
                                             <div class="ui-field-contain">
                                                 <label for="select-native-1">Peliculas:</label>
-                                                <select name="txtPelicula" id="select-native-1">
+                                                <select name="txtPelicula" id="txtPelicula">
                                                     <option value="terror">Terror</option>
                                                     <option value="suspenso">Suspenso</option>
                                                     <option value="accion">Accion</option>
@@ -100,7 +104,7 @@ document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
                                         <td>
                                             <div class="ui-field-contain">
                                                 <label for="txtDeporte">Deporte:</label>
-                                                <select name="select-native-1" id="select-native-1">
+                                                <select name="txtDeporte" id="txtDeporte">
                                                     <option value="tenis">Tenis</option>
                                                     <option value="futbol">Futbol</option>
                                                     <option value="golf">Golf</option>
@@ -114,7 +118,7 @@ document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
                                         <td>
                                             <div class="ui-field-contain">
                                                 <label for="select-native-1">Comida:</label>
-                                                <select name="txtComida" id="select-native-1">
+                                                <select name="txtComida" id="txtComida">
                                                     <option value="extranjeras">Extranjeras</option>
                                                     <option value="carnes">Carnes</option>
                                                     <option value="mar">Mar</option>
@@ -129,7 +133,7 @@ document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
                                         <td>
                                             <div class="ui-field-contain">
                                                 <label for="select-native-1">Musica:</label>
-                                                <select name="txtMusica" id="select-native-1">
+                                                <select name="txtMusica" id="txtMusica">
                                                     <option value="rock">Rock</option>
                                                     <option value="pop">Pop</option>
                                                     <option value="salsa">Salsa</option>
@@ -152,7 +156,10 @@ document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td>&nbsp<a style="color: #FCFDF4;" id="recibirVariable" name="recibirVariable"></a></td>
+                            <td>&nbsp<a style="color: #FCFDF4;" id="recibirVariable" name="recibirVariable"></a>
+                                <input type="hidden" name="recibirVariable2" id="recibirVariable2" placeholder="Pais">
+                                
+                            </td>
 
                         </tr>
                     </tbody>

@@ -15,9 +15,9 @@ $(function() {
         var strMusica = $("#txtMusica").val();
         var strComida = $("#txtComida").val();
         var strDeporte = $("#txtDeporte").val();
-        var strLog=$("#recibirVariable").val();
+        var strLog=$("#recibirVariable2").val();
         
-        
+        alert(strPelicula+' '+strMusica+' '+strComida+' '+strDeporte+' '+strLog);
         var dataString = {'pelicula': strPelicula, 'musica': strMusica, 'comida': strComida, 'deporte': strDeporte,'usuario': strLog};
         
         

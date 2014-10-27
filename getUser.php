@@ -23,8 +23,12 @@
     mysqli_select_db($con,"ajax_demo");
 
 
-//$sql="SELECT * FROM user WHERE id = '".$q."'";
-$sql="SELECT id, nombre, apellidos, login, foto FROM usuarios WHERE login= '$login' and password='$pass1'";
+$sql="SELECT u.id, u.nombre, u.apellidos, u.login, f.nombre foto
+FROM usuarios u, fotos f 
+WHERE u.login= '$login' 
+and u.password='$pass1'
+and f.usuario=u.login";
+//$sql="SELECT id, nombre, apellidos, login, foto FROM usuarios WHERE login= '$login' and password='$pass1'";
 $result = mysqli_query($con,$sql);
 
 $arrayData = array();

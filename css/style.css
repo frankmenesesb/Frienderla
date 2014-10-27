@@ -314,3 +314,5 @@ overflow: hidden;
  overflow: hidden;
  float: left;
 }
+
+#demo-borders .ui-collapsible-heading .ui-btn { border-top-width: 1px !important; }
