@@ -22,10 +22,15 @@ if (!$link) {
     }
 
 mysqli_select_db($link,"friender");
+$query = sprintf("SELECT nombre FROM citas WHERE usuario='$login' and nombre='$nombre'");
+$result = mysqli_query($link,$query);
+if(mysqli_num_rows($result)){
+    $strMessage = "cita ya existe por favor verifica!!";
+} else {
+mysqli_free_result($result);
 
 
-
-$query = sprintf("INSERT INTO citas (nombre,tipo,usuario) VALUES ('$nombre,'$tipo','$login')");
+$query = sprintf("INSERT INTO citas (nombre,tipo,usuario) VALUES ('$nombre','$tipo','$login')");
 
 $result = mysqli_query($link,$query);
 
@@ -46,7 +51,7 @@ if(mysqli_affected_rows($link)){
 
 
 
-
+}
 
 
 mysqli_close($link);

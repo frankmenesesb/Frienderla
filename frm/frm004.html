@@ -5,15 +5,10 @@
 <script src="../js/friender.js"></script>
  <script src="../js/setCita.js"></script>
 <script>
-window.onload = function()
-{
-var recibiendoVariable = location.search.slice( location.search.indexOf("=") + 1,location.search.indexOf("$"));
 
+$("#recibirVariable2").val(SESSION.USER);
+alert(''+SESSION.USER);
 
-document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
-$("#recibirVariable2").val(recibiendoVariable);
-
-}
 
 </script>
 <body>
@@ -64,7 +59,10 @@ $("#recibirVariable2").val(recibiendoVariable);
                                         <option value="Recreacion al Aire libre">Recreacion al Aire libre</option>
                                         <option value="Profesional">Profesional</option>
                                     </select>
-                                    <input type="text" name="recibirVariable2" id="recibirVariable2" placeholder="Pais">
+                                    <div id="txtMensaje">
+                                        
+                                    </div>
+                                    <input type="hidden" name="recibirVariable2" id="recibirVariable2">
                                 </div>
                                 <div>
                                     <input type="submit" value="Guardar" name="submit" class="submit_button"/>

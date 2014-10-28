@@ -20,6 +20,14 @@ function goTo(strLocation){
 	window.location.href = strLocation;
 }
 
+
+var SESSION = {
+    
+    'USER':'',
+    'NOMBRE':'',
+    'APELLIDO':'',
+    'FOTO':''
+};
 </script>
 
 
@@ -39,6 +47,10 @@ document.getElementById("recibirVariable3").innerHTML = recibiendoVariable3;
 $("#recibirVariable4").val(recibiendoVariable3);
 var ima="<img src=\"../photos/"+image+"\" width=\"50px\" id=\"imgPhoto\" class=\"imagenHeader\">";
 $("#fotoDiv").html(ima);
+
+SESSION.USER=recibiendoVariable3;
+alert('usuario '+SESSION.USER);
+
 }
 
 </script>

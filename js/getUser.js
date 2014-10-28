@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 
+
+
 $(function() {
     $(".submit_button").click(function() {
     
@@ -63,6 +65,7 @@ $(function() {
                             }else{
                             
                            location.href = '../frm/frmMain.html?var='+nombre+'$'+apellido+'*'+login+"!&"+foto+"@";
+                           
                            
                            
                             

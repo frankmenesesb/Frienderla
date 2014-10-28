@@ -17,11 +17,11 @@
         $strMesage = "No fue posible conectarse: ".mysqli_error($con);
     }
 
-    mysqli_select_db($con,"ajax_demo");
+    mysqli_select_db($con,"friender");
 
 
 //$sql="SELECT * FROM user WHERE id = '".$q."'";
-$sql="select u.nombre, f.nombre from usuarios u, gustos g, fotos f
+$sql="select u.nombre, f.nombre imagen from usuarios u, gustos g, fotos f
 where g.id_usuarios_gustos = u.login
 and (g.musica = (select a.musica from gustos a where id_usuarios_gustos='".$q."') 
 or g.deporte = (select b.deporte from gustos b where id_usuarios_gustos='".$q."')

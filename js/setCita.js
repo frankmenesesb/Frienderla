@@ -14,7 +14,8 @@ $(function() {
         var strNombre = $("#txtNombre").val();
         var strTipo = $("#tipoCategoria").val();
         var strLog=$("#recibirVariable2").val();
-        alert(strLog);
+        alert('uno'+strLog);
+        alert('dos'+SESSION.USER);
         
         var dataString = {'nombre': strNombre, 'tipo': strTipo,'usuario': strLog};
         
@@ -52,9 +53,15 @@ $(function() {
 
                     if (jsonResp.RESPONSE) {
 
+
+                        var encabezado='<div>';
+                        var final='</div>'
+                        var html=jsonResp.MESSAGE;
                         alert(jsonResp.MESSAGE);
+                        $("#txtNombre").val('');
+                        $("#tipoCategoria").val('');
                         //llevar();
-                        
+                        $("#txtMensaje").html(encabezado+html+final);
                         
                     
 
