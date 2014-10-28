@@ -37,7 +37,7 @@ function loadFrm(strForm){
 		break;
 		case "frm004":
 			$("#lblHeader").html("Grupos");
-			$("#divMainContent").load("../frm/frm004.html").trigger('create');
+			$("#divMainContent").load("../frm/frm004.html?var="+$("#recibirVariable4").val()+"$").trigger('create');
 			$("#img004").attr("src","../images/BOTONGRUPOA.png");
 		break;
 		case "frm005":

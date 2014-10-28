@@ -1,0 +1,60 @@
+<?php
+include("config.php");
+
+
+    $blResp = false;
+
+    $strMessage = "";
+
+$nombre = htmlspecialchars(trim($_REQUEST['nombre']));
+$tipo = htmlspecialchars(trim($_REQUEST['tipo']));
+
+$login = htmlspecialchars(trim($_REQUEST['usuario']));
+
+
+$link = mysqli_connect($datos[0],$datos[1],$datos[2],$datos[3]);
+$blResp = true;
+
+if (!$link) {
+        $blResp = false;
+        die('Could not connect: ' . mysqli_error($link));
+        $strMesage = "No fue posible conectarse: ".mysqli_error($link);
+    }
+
+mysqli_select_db($link,"friender");
+
+
+
+$query = sprintf("INSERT INTO citas (nombre,tipo,usuario) VALUES ('$nombre,'$tipo','$login')");
+
+$result = mysqli_query($link,$query);
+
+
+$arrayData = array();
+
+
+if(mysqli_affected_rows($link)){
+ $strMessage = "la cita ha sido creada con exito!!";
+
+   
+} else {
+ $strMessage = "EMPTY";
+}
+
+
+
+
+
+
+
+
+
+mysqli_close($link);
+
+$arrayResp = array(
+    'RESPONSE'  => $blResp,
+    'MESSAGE'   => $strMessage
+    //'DATA'      => $arrayData
+);
+
+echo json_encode($arrayResp);

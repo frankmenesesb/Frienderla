@@ -1,6 +1,22 @@
 
-<script src="../js/friender.js"></script>
+<html>
 
+
+<script src="../js/friender.js"></script>
+ <script src="../js/setCita.js"></script>
+<script>
+window.onload = function()
+{
+var recibiendoVariable = location.search.slice( location.search.indexOf("=") + 1,location.search.indexOf("$"));
+
+
+document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
+$("#recibirVariable2").val(recibiendoVariable);
+
+}
+
+</script>
+<body>
 <br>
 <table width="95%" align="center" class="ui-corner-all ui-shadow" id="tblMainWhite">
 			<tbody>
@@ -36,20 +52,22 @@
 				<br />
 				<input type="text" id="txtNombre" value="" placeholder="Nombre"/>
 				<br />
+                                
 				<div class="ui-field-contain">
                                     <label for="select-native-1" class="lblMedium">Categoria:</label>
-                                    <select name="select-native-1" id="select-native-1" >
+                                    <select name="tipoCategoria" id="tipoCategoria" >
                                         <option value="">Seleccion Categoria</option>
-					<option value="">Arte y Entretenimiento</option>
-                                        <option value="">Universitarios</option>
-                                        <option value="">Comida y restaurante</option>
-                                        <option value="">Nocturno</option>
-                                        <option value="">Recreacion al Aire libre</option>
-                                        <option value="">Profesional</option>
+					<option value="Arte y Entretenimiento">Arte y Entretenimiento</option>
+                                        <option value="Universitarios">Universitarios</option>
+                                        <option value="Comida y restaurante">Comida y restaurante</option>
+                                        <option value="Nocturno">Nocturno</option>
+                                        <option value="Recreacion al Aire libre">Recreacion al Aire libre</option>
+                                        <option value="Profesional">Profesional</option>
                                     </select>
+                                    <input type="text" name="recibirVariable2" id="recibirVariable2" placeholder="Pais">
                                 </div>
                                 <div>
-                                    <a href="#" class="ui-btn " onclick="javascript:loadFrm('frm006');">Siguiente</a>
+                                    <input type="submit" value="Guardar" name="submit" class="submit_button"/>
                                 </div>
                                 
 				
@@ -72,3 +90,5 @@
 		</tr>
 	</tbody>
 </table>
+</body>
+</html>

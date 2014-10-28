@@ -11,6 +11,7 @@
 	<script src="../js/jquery.js"></script>
 	<script src="../js/jquery.mobile-1.4.4.min.js"></script>
 	<script src="../js/friender.js"></script>
+       
         
 </head>
 
@@ -34,6 +35,8 @@ var image=location.search.slice( location.search.indexOf("&") + 1,location.searc
 document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
 document.getElementById("recibirVariable2").innerHTML = recibiendoVariable2;
 document.getElementById("recibirVariable3").innerHTML = recibiendoVariable3;
+
+$("#recibirVariable4").val(recibiendoVariable3);
 var ima="<img src=\"../photos/"+image+"\" width=\"50px\" id=\"imgPhoto\" class=\"imagenHeader\">";
 $("#fotoDiv").html(ima);
 }
@@ -56,6 +59,7 @@ $("#fotoDiv").html(ima);
                         </td>
                         <td align="left" width="90%" style="color: white;"><a id="recibirVariable" name="recibirVariable"></a>
                             &nbsp<a id="recibirVariable2" name="recibirVariable2"></a>
+                            
                         </td>
                         <td width="5%" align="center">
                             <img src="../images/GRUPOAZUL.png" width="25px">
@@ -80,7 +84,8 @@ $("#fotoDiv").html(ima);
             <table width="100%" align="center">
                 <tr>
                     <td width="100%" align="center"><img src="../images/FRIENDERSITO.png"></td>
-                    <td>&nbsp<a style="color: #FCFDF4;" id="recibirVariable3" name="recibirVariable3"></a></td>
+                    <td>&nbsp<a style="color: #FCFDF4;" id="recibirVariable3" name="recibirVariable3"></a>
+                    <input type="text" name="recibirVariable4" id="recibirVariable4" placeholder="Pais"></td>
                 </tr>
             </table>
 
