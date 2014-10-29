@@ -9,7 +9,11 @@ include("config.php");
 $nombre = htmlspecialchars(trim($_REQUEST['nombre']));
 $hora = htmlspecialchars(trim($_REQUEST['hora']));
 $lugar = htmlspecialchars(trim($_REQUEST['lugar']));
-$fecha = htmlspecialchars(trim($_REQUEST['fecha']));
+//$fecha = date_date_set($_REQUEST['fecha'],'YYYY-MM-DD');
+
+
+
+$fecha = date("y-m-d", strtotime($_REQUEST['fecha']));
 $tipo = htmlspecialchars(trim($_REQUEST['tipo']));
 
 $login = htmlspecialchars(trim($_REQUEST['usuario']));
