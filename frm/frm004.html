@@ -1,16 +1,21 @@
 
 <html>
+    
+    
+    <head>
 
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.mobile-1.4.4.min.js"></script>
 
-<script src="../js/friender.js"></script>
  <script src="../js/setCita.js"></script>
 <script>
 
 $("#recibirVariable2").val(SESSION.USER);
-alert(''+SESSION.USER);
+//alert(''+SESSION.USER);
 
 
 </script>
+    </head>
 <body>
 <br>
 <table width="95%" align="center" class="ui-corner-all ui-shadow" id="tblMainWhite">
@@ -45,11 +50,12 @@ alert(''+SESSION.USER);
 			<td>&nbsp;</td>
 			<td width="90%" align="left">
 				<br />
+                                <label for="txtNombre">Hora:</label>
 				<input type="text" id="txtNombre" value="" placeholder="Nombre"/>
 				<br />
                                 
 				<div class="ui-field-contain">
-                                    <label for="select-native-1" class="lblMedium">Categoria:</label>
+                                    <label for="tipoCagegoria" class="lblMedium">Categoria:</label>
                                     <select name="tipoCategoria" id="tipoCategoria" >
                                         <option value="">Seleccion Categoria</option>
 					<option value="Arte y Entretenimiento">Arte y Entretenimiento</option>
@@ -59,6 +65,12 @@ alert(''+SESSION.USER);
                                         <option value="Recreacion al Aire libre">Recreacion al Aire libre</option>
                                         <option value="Profesional">Profesional</option>
                                     </select>
+                                    <label for="txtFecha">Fecha</label>
+                                    <input type="date" data-clear-btn="true" name="txtFecha" id="txtFecha" value="" placeholder="Fecha">
+                                    <label for="txtHora">Hora:</label>
+                                    <input type="time" data-clear-btn="true" name="txtHora" id="txtHora" value="" placeholder="Hora">
+                                    <label for="txtLugar">Lugar:</label>
+				    <input type="text" id="txtLugar" value="" placeholder="Lugar"/>
                                     <div id="txtMensaje">
                                         
                                     </div>

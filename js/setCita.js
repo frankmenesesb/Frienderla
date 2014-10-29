@@ -12,12 +12,15 @@ $(function() {
         
         
         var strNombre = $("#txtNombre").val();
+        var strHora = $("#txtHora").val();
+        var strFecha = $("#txtFecha").val();
+        var strLugar = $("#txtLugar").val();
         var strTipo = $("#tipoCategoria").val();
         var strLog=$("#recibirVariable2").val();
-        alert('uno'+strLog);
-        alert('dos'+SESSION.USER);
+        //alert('uno'+strLog);
+        //alert('dos'+SESSION.USER);
         
-        var dataString = {'nombre': strNombre, 'tipo': strTipo,'usuario': strLog};
+        var dataString = {'nombre': strNombre, 'tipo': strTipo,'usuario': strLog, 'hora': strHora,'fecha': strFecha,'lugar': strLugar};
         
         
         if (strNombre === '') {

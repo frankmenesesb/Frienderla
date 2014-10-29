@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" href="../favicon.ico">
 	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.4.min.css">
 	<link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<script src="../js/jquery.js"></script>
 	<script src="../js/jquery.mobile-1.4.4.min.js"></script>
 	<script src="../js/friender.js"></script>
@@ -38,6 +38,7 @@ var recibiendoVariable = location.search.slice( location.search.indexOf("=") + 1
 var recibiendoVariable2 = location.search.slice( location.search.indexOf("$") + 1,location.search.indexOf("*"));
 var recibiendoVariable3 = location.search.slice( location.search.indexOf("*") + 1,location.search.indexOf("!"));
 var image=location.search.slice( location.search.indexOf("&") + 1,location.search.indexOf("@"));
+var eres=location.search.slice( location.search.indexOf("@") + 1,location.search.indexOf(":"));
 //var recibiendoVariable = location.search.indexOf("=");
 
 document.getElementById("recibirVariable").innerHTML = recibiendoVariable;
@@ -48,8 +49,14 @@ $("#recibirVariable4").val(recibiendoVariable3);
 var ima="<img src=\"../photos/"+image+"\" width=\"50px\" id=\"imgPhoto\" class=\"imagenHeader\">";
 $("#fotoDiv").html(ima);
 
+
+if(eres==='Hombre'){
+$("#lblHeader").html("Eres el mejor");
+}else{
+   $("#lblHeader").html("Eres el mejor");
+}
 SESSION.USER=recibiendoVariable3;
-alert('usuario '+SESSION.USER);
+//alert('usuario '+SESSION.USER);
 
 }
 

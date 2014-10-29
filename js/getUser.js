@@ -57,6 +57,7 @@ $(function() {
                             var apellido=jsonResp.DATA[i]["apellidos"];
                             var login=jsonResp.DATA[i]["login"];
                             var foto=jsonResp.DATA[i]["foto"];
+                            var sexo=jsonResp.DATA[i]["genero"];
                             var log="";
                             if( (nombre===null || nombre==="")  || (id===null || id==="")){ 
                             
@@ -64,7 +65,7 @@ $(function() {
                            
                             }else{
                             
-                           location.href = '../frm/frmMain.html?var='+nombre+'$'+apellido+'*'+login+"!&"+foto+"@";
+                           location.href = '../frm/frmMain.html?var='+nombre+'$'+apellido+'*'+login+"!&"+foto+"@"+sexo+":";
                            
                            
                            

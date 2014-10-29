@@ -7,6 +7,9 @@ include("config.php");
     $strMessage = "";
 
 $nombre = htmlspecialchars(trim($_REQUEST['nombre']));
+$hora = htmlspecialchars(trim($_REQUEST['hora']));
+$lugar = htmlspecialchars(trim($_REQUEST['lugar']));
+$fecha = htmlspecialchars(trim($_REQUEST['fecha']));
 $tipo = htmlspecialchars(trim($_REQUEST['tipo']));
 
 $login = htmlspecialchars(trim($_REQUEST['usuario']));
@@ -30,7 +33,7 @@ if(mysqli_num_rows($result)){
 mysqli_free_result($result);
 
 
-$query = sprintf("INSERT INTO citas (nombre,tipo,usuario) VALUES ('$nombre','$tipo','$login')");
+$query = sprintf("INSERT INTO citas (nombre,tipo,usuario,hora,fecha,lugar) VALUES ('$nombre','$tipo','$login','$hora','$fecha','$lugar')");
 
 $result = mysqli_query($link,$query);
 

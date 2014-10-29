@@ -23,7 +23,7 @@
     mysqli_select_db($con,"ajax_demo");
 
 
-$sql="SELECT u.id, u.nombre, u.apellidos, u.login, f.nombre foto
+$sql="SELECT u.id, u.nombre, u.apellidos, u.login, f.nombre foto, u.genero
 FROM usuarios u, fotos f 
 WHERE u.login= '$login' 
 and u.password='$pass1'

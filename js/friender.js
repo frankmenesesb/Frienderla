@@ -21,7 +21,7 @@ function loadFrm(strForm){
 	
 	switch(strForm){
 		case "frm001":
-			$("#lblHeader").html("Eres La mejor");
+			//$("#lblHeader").html("Eres La mejor");
 			$("#divMainContent").load("../frm/frm001.html").trigger('create');
 			$("#img001").attr("src","../images/BOTOTIMELA.png");
 		break;
