@@ -8,42 +8,24 @@
 <script src="../js/jquery.mobile-1.4.4.min.js"></script>
 
  <script src="../js/setCita.js"></script>
+ <script src="../js/setCitaUsuario.js"></script>
+ <script src="../js/getCitas.js"></script>
+ <script src="../js/getCitasUsuarios.js"></script>
 <script>
 
 $("#recibirVariable2").val(SESSION.USER);
 //alert(''+SESSION.USER);
 
+mostrarCitas();
 
+function mensaje(log){
+    alert('Aceptaste '+log);
+}
 </script>
     </head>
 <body>
-<br>
-<table width="95%" align="center" class="ui-corner-all ui-shadow" id="tblMainWhite">
-			<tbody>
-				<tr>
-					<td width="20%"  align="center"><img src="../images/ARTE.png" width="50px"></td>
-					<td width="70%"  align="left">
-					<h3 style="color:gray !important;">Tarde de Comida</h3>
-					</td>
-					<td>&nbsp;</td>
-				</tr>
-			</tbody>
-		</table>
-<br>
-
-<table width="95%" align="center" class="ui-corner-all ui-shadow" id="tblMainWhite">
-			<tbody>
-				<tr>
-                                    <td width="20%"  align="center"><img src="../images/PROFESIONAL.png" width="50px"></td>
-					<td width="70%"  align="left">
-					<h3 style="color:gray !important;">Profesionales</h3>
-					</td>
-					<td>&nbsp;</td>
-				</tr>
-			</tbody>
-		</table>
-<br>
-
+    
+    <br>
 <table width="95%" align="center" class="ui-corner-all ui-shadow" id="tblMainWhite">
 	<tbody>
 		<tr>
@@ -99,6 +81,18 @@ $("#recibirVariable2").val(SESSION.USER);
 			<td>&nbsp;</td>
 		</tr>
 	</tbody>
-</table>
+</table>    
+<br>
+<div>
+    Eventos activos:
+   
+   
+</div>
+<div id="eventosCitas">
+
+</div>
+<br>
+
+
 </body>
 </html>

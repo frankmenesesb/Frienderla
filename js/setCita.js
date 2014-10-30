@@ -63,8 +63,12 @@ $(function() {
                         alert(jsonResp.MESSAGE);
                         $("#txtNombre").val('');
                         $("#tipoCategoria").val('');
+                        $("#txtHora").val('');
+                        $("#txtFecha").val('');
+                        $("#txtLugar").val('');
                         //llevar();
                         $("#txtMensaje").html(encabezado+html+final);
+                        mostrarCitas();
                         
                     
 

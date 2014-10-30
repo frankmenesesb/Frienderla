@@ -8,8 +8,8 @@
 
     //$q = intval($_REQUEST['strUser']);
     
-    $login = htmlspecialchars(trim($_REQUEST['usuario']));
-    $pass1 = sha1(md5(trim($_REQUEST['contrasena'])));
+    //$login = htmlspecialchars(trim($_REQUEST['usuario']));
+    //$pass1 = sha1(md5(trim($_REQUEST['contrasena'])));
 
     $con = mysqli_connect($datos[0],$datos[1],$datos[2],$datos[3]);
     $blResp = true;
@@ -20,14 +20,13 @@
         $strMesage = "No fue posible conectarse: ".mysqli_error($con);
     }
 
-    mysqli_select_db($con,"ajax_demo");
+    mysqli_select_db($con,"friender");
 
 
-$sql="SELECT c.nombre, c.tipo, c.fecha, c.hora, c.lugar
-FROM citas c
-WHERE u.login= '$login' 
-and u.password='$pass1'
-and f.usuario=u.login";
+$sql="SELECT c.idcitas,c.nombre descripcion, c.tipo, c.hora, c.fecha, c.lugar, u.nombre, u.apellidos
+FROM citas c, usuarios u
+where u.login=c.usuario
+order by c.idcitas desc";
 //$sql="SELECT id, nombre, apellidos, login, foto FROM usuarios WHERE login= '$login' and password='$pass1'";
 $result = mysqli_query($con,$sql);
 
