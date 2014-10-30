@@ -97,6 +97,7 @@ function mostrarCitasUsuarios(cita) {
                         
                         $(tabla+z).html(html+datos+final);
                         z=z+1;
+                        datos='';
                         }
                         
                         

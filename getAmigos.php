@@ -6,7 +6,7 @@
 
     $strMessage = "";
 
-    $q = intval($_REQUEST['usuario']);
+    $q = (trim($_REQUEST['usuario']));
 
     $con = mysqli_connect($datos[0],$datos[1],$datos[2],$datos[3]);
     $blResp = true;
@@ -21,7 +21,7 @@
 
 
 //$sql="SELECT * FROM user WHERE id = '".$q."'";
-$sql="select u.nombre, f.nombre imagen from usuarios u, gustos g, fotos f
+$sql="select u.login,u.nombre, f.nombre imagen from usuarios u, gustos g, fotos f
 where g.id_usuarios_gustos = u.login
 and (g.musica = (select a.musica from gustos a where id_usuarios_gustos='".$q."') 
 or g.deporte = (select b.deporte from gustos b where id_usuarios_gustos='".$q."')

@@ -1,100 +1,121 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-function showUser(strUsuario ) {
+
+
+
+function mostrarAmigos() {
     
     
     
-    var strLog = $("#txtUsuario").val();
-        var strPass = $("#txtContrasena").val();
         
+        var strLog=$("#recibirVariable2").val();
+        var strPass = "prueba";
+        var z=0;
         
-        var dataString = {'usuario': strUsuario};
+        var dataString = {'usuario': strLog, 'contrasena': strPass};
     
-    if (str!=="2") {
-        alert("¬¬");
-    }else{
+    if (strLog === '' ) {
+
+            alert("No has ingresado el usuario :)..");
+            $("#txtUsuario").focus();
+
+        }else if (strPass === '' ) {
+
+            alert("No has ingresado Contraseña :)..");
+            $("#txtContrasena").focus();
+
+        }else
+        {
         $.ajax({
             type:'POST',
             data:dataString,
             dataType:'json',
-            url: "getUser.php",
+            url: "../getAmigos.php",
             success:function(jsonResp){
                 
                 if(jsonResp.RESPONSE){
                     
                     
-                    
+                    if(jsonResp.MESSAGE === "undefined" || jsonResp.MESSAGE ===undefined) {
+                        
+                        alert('Error Usuario no registrado!!');
+                    }
                     if(jsonResp.MESSAGE === ""){
-                        var html="";
-                        var video="";
-                        var comentario="";
-                        var image="";
-                        var imagec="";
-                        var personaje="";
-                        var coment;
-                        var encabezado = '<thead>';
-                            encabezado += '<tr>';
-                            
-                            encabezado +='<th data-priority="1" style=\"color: #005599; text-align: center;\"><h3>Nombre</h3></th>';
-                            encabezado +='<th data-priority="2" style=\"color: #005599; text-align: center;\"><h3>Comentario</h3></th>';
-                            encabezado += '</tr>';
-                            encabezado += '</thead>';
-                            encabezado += '<tbody>';
-                        var final ="</tbody></table>";
+                        
+                        var html='';
+                           
                         
                         for(var i=0;i<jsonResp.DATA.length;i++){
                             
-                            
-                           
-                            var video=jsonResp.DATA[i]["video"];
-                            var comentario=jsonResp.DATA[i]["comentario"];
-                            var image=jsonResp.DATA[i]["imagen"];
-                            var personaje=jsonResp.DATA[i]["nombre"];
-                            var log="";
-                            if( (personaje===null || personaje==="") || ((comentario==null || comentario==="") && (image===null || image==="")) ||(/script/.test(comentario)) ){ 
-                            
-                            log="error datos";
-                           
-                            }else{
-                            if( video===null || video==""){
-                                video="";
-                                
-                            }else{
-                                
-                                video='<br>'+video;
-                            }
-                            imagec=image.substring(0, 3);
-                            if( image===null || image==""){
-                                image="<img src=\""+"images/INVISIBLE.png"+"\" width=\"5\" height=\"5\">"
-                                
-                            }else{
-                                
-                                image="<br><img src=\""+image+"\"   style=\"width:50%; height=50%; \" >";
-                            }
-                            
-                            if( comentario===null || comentario==="" ){
-                                comentario="";
-                            }else{
-                                comentario="<br>"+comentario;
-                            }
                            
                             
+                                html+='<div>';
+		                
+			
+                            var foto=jsonResp.DATA[i]["imagen"];
+                            var nombre=jsonResp.DATA[i]["nombre"];
+                            var login=jsonResp.DATA[i]["login"];
+                            var ima="<img src=\"../photos/"+foto+"\" width=\"50px\" id=\"imgPhoto\" class=\"imagenHeader\">";
                             
-                            html=html+"<tr>\n\
-                                    <td><h4>"+jsonResp.DATA[i]["nombre"]+"</h4></td>"+
-                                    "<td>"+comentario+video+image+"</td></tr>";
+                            if( (nombre===null || nombre==="") ){ 
                             
-                        }
+                            alert("Error: citas invalidas ");
+                           
+                            }else{
+                            
+                               
+                            
+                           //location.href = '../frm/frmMain.html?var='+nombre+'$'+apellido+'*'+login+"!&"+foto+"@"+sexo+":";
+                                html+='<table width="95%" align="center" class="ui-corner-all ui-shadow" id="tblMainWhite">';
+			        html+='<tbody>';
+                                html+='<tr>';
+				html+='<td width="20%">'+ima+'</td>';
+			        html+='<td width="50%">';
+			        html+='<h5 style="clor:gray !important;"> usuario: '+nombre+'</h5>';
+			        html+='</td>';
+			        html+='<td width="30%">';
+			        html+="<a href=\"#\" class=\"ui-btn ui-shadow ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-b ui-btn-inline\" onclick=\"asistir('"+login+"');\">Check</a>";
+			        html+='</td>';
+				html+='</tr>';
+                                
+                                
+//                                html+='<tr>';
+//                                html+='<td>';
+//                                html+='<h6 style="clor:gray !important;">Asitirán: </h6>';
+//                                html+='</td>';
+//                                
+//                                html+='<td>';
+//                                 html+='<h6 style="clor:gray !important;">Adolfo Meneses,';
+//                                 html+='Frank Meneses, ';
+//                                 html+='Carlos Duran, ';
+//                                 html+='Marta Henao, ';
+//                                 html+='Mario Baracus, </h6>';
+//                                 html+='</td>';
+//                                 html+='<td>';
+//                                html+='</td>';
+//                                html+='</tr>';
+                                html+='</tbody>';
+                                html+='<tbody id="usuariosCitas'+z+'">';
+                                
+                                html+='</tbody>';
+                                html+='</table>';
+                                html+='<br>';
+                                z=z+1;
+                                
+                            //document.location.href = "../frm/frmMain.html?parametro1=" + parametro1 + "&parametro2=" + parametro2 + "&";
+                        
+                            
                         }
                         
-                        $("#txtHint").html(encabezado+html+final);
+                        html+='</div>';
+                        //alert('lo que se envia '+id);
+                        //mostrarCitasUsuarios(id);
+                        }
+                        
+                        $("#listAmigos").html(html);
+                        
                         
                     }else if(jsonResp.MESSAGE === "EMPTY"){
-                        alert("No se encontraron datos");
+                        alert("Error: no se encontro datos de registro del usuario!!");
                     }
                 }else{
                     alert("Ocurrio Un error:"+jsonResp.MESSAGE);
@@ -107,6 +128,8 @@ function showUser(strUsuario ) {
             }
         });
     }
+    
+     
     
 }
 
